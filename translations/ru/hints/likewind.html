@@ -1,0 +1,67 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю с чего начать решение этой миссии.
+    </div>
+    <div class="answer">
+        Вам необходимо написать цикл, который бы последовательно проходил по словарю с матросами и отправлял их на один из двух кораблей в зависимости от возраста. Разобраться с тем, как работать со словарями, вам может помочь официальная <a href='https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict'>документация</a> Python.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Вы могли бы привести пример кода?
+    </div>
+    <div class="answer">
+        Цикл и условие распределения матросов будет выглядеть так:
+        <pre class="brush: python">
+for i in sailors.keys():
+    if sailors[i] > 40 or sailors[i] < 20:
+        #send sailor to the first ship
+    else:
+        #send sailor to the second ship
+        </pre>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Как именно мне записывать каждого конкретного матроса на нужный корабль?
+    </div>
+    <div class="answer">
+        Для этого можно создать перед циклом 2 списка - first_ship & second_ship и использовать метод <a href='https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists'>append</a>, чтобы добавлять матроса в нужный список.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мне нужен пример кода.
+    </div>
+    <div class="answer">
+        В сочетании с предыдущей частью решения это будет выглядеть так:
+        <pre class="brush: python">
+first_ship = []
+second_ship = []
+
+for i in sailors.keys():
+    if sailors[i] > 40 or sailors[i] < 20:
+        first_ship.append(i)
+    else:
+        second_ship.append(i)
+        </pre>
+    </div>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Но имена матросов в списке идут в хаотичном порядке. Как мне их отсортировать?
+    </div>
+    <div class="answer">
+        Для сортировки вы можете использовать <a href='https://docs.python.org/3/library/functions.html#sorted'>функцию sorted()</a> или метод sort(), который описан в <a href='https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists'>списке доступных методов</a> для структуры данных - list.
+    </div>
+</div>
+
+
+</body>
