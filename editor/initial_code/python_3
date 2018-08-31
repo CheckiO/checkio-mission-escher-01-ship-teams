@@ -1,6 +1,6 @@
 def two_teams(sailors):
     #replace this for solution
-    return numbers
+    return 0
 
 if __name__ == '__main__':
     print("Example:")
