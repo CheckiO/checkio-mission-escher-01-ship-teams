@@ -1,0 +1,70 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        I don’t know how to start solving this mission.
+    </div>
+    <div class="answer">
+        You need to write a loop that would consistently be going over the dictionary with the sailors and send them to one of the two ships, depending on the age.
+The official <a href='https://docs.python.org/3.6/library/stdtypes.html#mapping-types-dict'>Python documentation</a> can help you understand how to work with dictionaries.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Can you give an example of the code?
+    </div>
+    <div class="answer">
+        The loop and the condition of sailors assignment will look like this:
+        <pre class="brush: python">
+for i in sailors.keys():
+    if sailors[i] > 40 or sailors[i] < 20:
+        #send sailor to the first ship
+    else:
+        #send sailor to the second ship
+        </pre>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        How do I appoint each particular sailor to the desired ship? 
+    </div>
+    <div class="answer">
+        You can create 2 lists before a loop - first_ship and second_ship, and use an <a href='https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists'>append</a> method to add sailors to the needed list.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        I need an example of the code.
+    </div>
+    <div class="answer">
+        In combination with the previous part of the solution, it’ll look like this:
+        <pre class="brush: python">
+first_ship = []
+second_ship = []
+
+for i in sailors.keys():
+    if sailors[i] > 40 or sailors[i] < 20:
+        first_ship.append(i)
+    else:
+        second_ship.append(i)
+        </pre>
+    </div>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        But the sailors names on the list go randomly. How can I sort them?
+    </div>
+    <div class="answer">
+        You can sort them by using the <a href='https://docs.python.org/3/library/functions.html#sorted'>sorted() function</a> or the sort() method, which is described in the <a href='https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists'>catalog of available methods</a> for the data structure - list.
+    </div>
+</div>
+
+
+</body>
+
+
