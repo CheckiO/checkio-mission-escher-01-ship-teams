@@ -34,10 +34,14 @@
 <strong>Пример:</strong>
 </p>
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">two_teams({'Smith': 34, 'Wesson': 22, 'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], ['Smith', 'Wesson']]
+<pre class="brush: javascript">twoTeams({'Smith': 34, 'Wesson': 22, 
+'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], 
+['Smith', 'Wesson']]
 </pre>
 {% else %}
-<pre class="brush: python">two_teams({'Smith': 34, 'Wesson': 22, 'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], ['Smith', 'Wesson']]
+<pre class="brush: python">two_teams({'Smith': 34, 'Wesson': 22, 
+'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], 
+['Smith', 'Wesson']]
 </pre>
 {% endif %}
 </div>
