@@ -37,6 +37,7 @@ The input data will be the dictionary where keys will be the surnames of the sai
 <strong>Example:</strong>
 </p>
 {% if interpreter.slug == "js-node" %}
+<<<<<<< HEAD
 <pre class="brush: javascript">twoTeams({'Smith': 34, 'Wesson': 22, 
 'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], 
 ['Smith', 'Wesson']]
@@ -45,6 +46,26 @@ The input data will be the dictionary where keys will be the surnames of the sai
 <pre class="brush: python">two_teams({'Smith': 34, 'Wesson': 22, 
 'Coleman': 45, 'Abrahams': 19}) == [['Abrahams', 'Coleman'], 
 ['Smith', 'Wesson']]
+=======
+<pre class="brush: javascript">twoTeams({
+	'Smith': 34,
+	'Wesson': 22,
+	'Coleman': 45,
+	'Abrahams': 19}) == [
+		['Abrahams', 'Coleman'],
+		['Smith', 'Wesson']
+	]
+</pre>
+{% else %}
+<pre class="brush: python">two_teams({
+	'Smith': 34,
+	'Wesson': 22,
+	'Coleman': 45,
+	'Abrahams': 19}) == [
+		['Abrahams', 'Coleman'],
+		['Smith', 'Wesson']
+	]
+>>>>>>> 575d24f3d8702acbaaa1c374f2730e1d17e9142a
 </pre>
 {% endif %}
 </div>
@@ -59,5 +80,5 @@ The input data will be the dictionary where keys will be the surnames of the sai
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p><strong>Precondition</strong>:<br>
-    2 <= amount of the sailors <= 100
+    1 <= amount of the sailors <= 100
 </p>
