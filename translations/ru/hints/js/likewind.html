@@ -19,7 +19,8 @@
     var sailor_names = Object.keys(sailors);
     var i;
     for (i=0; i<sailor_names.length; i++){
-        if (sailors[sailor_names[i]] > 40 || sailors[sailor_names[i]] < 20){
+        if (sailors[sailor_names[i]] > 40 || 
+            sailors[sailor_names[i]] < 20){
             //send sailor to the first ship
         }
         else {
@@ -51,7 +52,8 @@
     var sailor_names = Object.keys(sailors);
     var i;
     for (i=0; i<sailor_names.length; i++){
-        if (sailors[sailor_names[i]] > 40 || sailors[sailor_names[i]] < 20){
+        if (sailors[sailor_names[i]] > 40 || 
+            sailors[sailor_names[i]] < 20){
             first_ship.push(sailor_names[i]);
         }
         else {
