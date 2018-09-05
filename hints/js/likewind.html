@@ -1,0 +1,78 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        I don’t know how to start solving this mission.
+    </div>
+    <div class="answer">
+        You need to write a loop that would consistently be going over the dictionary with the sailors and send them to one of the two ships, depending on the age.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Can you give an example of the code?
+    </div>
+    <div class="answer">
+        The loop and the condition of sailors assignment will look like this:
+        <pre class="brush: javascript">
+    var sailor_names = Object.keys(sailors);
+    var i;
+    for (i=0; i<sailor_names.length; i++){
+        if (sailors[sailor_names[i]] > 40 || sailors[sailor_names[i]] < 20){
+            //send sailor to the first ship
+        }
+        else {
+            #send sailor to the second ship
+        }
+    }
+        </pre>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        How do I appoint each particular sailor to the desired ship? 
+    </div>
+    <div class="answer">
+        You can create 2 lists before a loop - first_ship and second_ship, and use a push() method to add sailors to the needed list.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        I need an example of the code.
+    </div>
+    <div class="answer">
+        In combination with the previous part of the solution, it’ll look like this:
+        <pre class="brush: javascript">
+    var first_ship = [];
+    var second_ship = [];
+    var sailor_names = Object.keys(sailors);
+    var i;
+    for (i=0; i<sailor_names.length; i++){
+        if (sailors[sailor_names[i]] > 40 || sailors[sailor_names[i]] < 20){
+            first_ship.push(sailor_names[i]);
+        }
+        else {
+            second_ship.push(sailor_names[i]);
+        }
+    }
+        </pre>
+    </div>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        But the sailors names on the list go randomly. How can I sort them?
+    </div>
+    <div class="answer">
+        You can sort them by using the sort() method.
+    </div>
+</div>
+
+
+</body>
+
+
