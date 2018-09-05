@@ -1,0 +1,85 @@
+<!-- Describe task in general -->
+
+
+<img class="for_info_only half" src="{{MEDIA}}ships.png" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+冒険へようこそ！
+今あなたは危険であると同時に大変エキサイティングな旅を始めました。
+
+道中多くの謎を解き、罠を避け、追跡者を出し抜く必要があります。
+これら全てはこの世界で最も価値あるアーティファクト、無限エネルギーの源「ハイパーキューブ」を見つけ出すための唯一の手段です。 <br>
+<br>
+ハイパーキューブは変わり者のエッシャー卿が数世紀前に建てた城の中心に配置されてます。
+彼は孤独への偏愛ゆえに島に自身の城を建てました。
+彼の (実に謎多き) 死後、島から大陸に帰還した従者よりこの世界の奇妙な物事や現象が語られ、多くの探検隊とトレジャーハンターのグループが島を訪れましたが帰還者はいませんでした…。<br>
+
+<br>
+幸運を祈ります！  多分あなたは他の人たちより運がいいはずです。<br>
+<br>
+装備を集めて荷詰めし出発の時が来ました。
+現在あなたは大陸の港にいます。
+あなたは島で直面する危険を考慮して船員を雇い 2つの船を準備しました。
+あなたの目的はキューブを入手することであり、道中で発見するであろう他の宝物は船員への報酬にするつもりです。<br>
+<br>
+最初の仕事は簡単です。あなたは船員を 2つのチームに分けなくてはなりません。(船が 2隻であるから )
+</div>
+
+<p>
+あなたは次のルールで船員を 2つのチームに分ける必要があります: 40歳以上もしくは 20歳以上の船員からなる第1チーム、その他の船員の第2チーム。
+これは熟練船員が若手の船員を助けるためです。
+入力データは船員の姓をキーとしその年齢を値とする辞書です。
+
+船員の振り分け後、各チームの姓のリストをアルファベット順でソートすること。
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 船員の姓と年齢の辞書
+</p>
+
+<p>
+    <strong>出力: </strong> 2つのチームのリストのリスト
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">twoTeams({
+	'Smith': 34,
+	'Wesson': 22,
+	'Coleman': 45,
+	'Abrahams': 19}) == [
+		['Abrahams', 'Coleman'],
+		['Smith', 'Wesson']
+	]
+</pre>
+{% else %}
+<pre class="brush: python">two_teams({
+	'Smith': 34,
+	'Wesson': 22,
+	'Coleman': 45,
+	'Abrahams': 19}) == [
+		['Abrahams', 'Coleman'],
+		['Smith', 'Wesson']
+	]
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+あるものを少数のほぼ等しいグループに分割できます
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    1 <= amount of the sailors <= 100
+</p>
