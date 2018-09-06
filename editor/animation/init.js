@@ -6,7 +6,7 @@ requirejs(['ext_editor_io', 'jquery_190'],
         var $tryit;
 
         var io = new extIO({
-            multipleArguments: true,
+            multipleArguments: false,
             functions: {
                 python: 'two_teams',
                 js: 'twoTeams'

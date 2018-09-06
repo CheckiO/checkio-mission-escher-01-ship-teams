@@ -16,14 +16,10 @@
     <div class="answer">
         Цикл и условие распределения матросов будет выглядеть так:
         <pre class="brush: javascript">
-    var sailor_names = Object.keys(sailors);
-    var i;
-    for (i=0; i<sailor_names.length; i++){
-        if (sailors[sailor_names[i]] > 40 || 
-            sailors[sailor_names[i]] < 20){
+    for (let name in sailors) {
+        if (sailors[name] < 20 || sailors[name] > 40) {
             //send sailor to the first ship
-        }
-        else {
+        } else {
             //send sailor to the second ship
         }
     }
@@ -47,17 +43,12 @@
     <div class="answer">
         В сочетании с предыдущей частью решения это будет выглядеть так:
         <pre class="brush: javascript">
-    var first_ship = [];
-    var second_ship = [];
-    var sailor_names = Object.keys(sailors);
-    var i;
-    for (i=0; i<sailor_names.length; i++){
-        if (sailors[sailor_names[i]] > 40 || 
-            sailors[sailor_names[i]] < 20){
-            first_ship.push(sailor_names[i]);
-        }
-        else {
-            second_ship.push(sailor_names[i]);
+    let first = [], second = [];
+    for (let name in sailors) {
+        if (sailors[name] < 20 || sailors[name] > 40) {
+            first.push(name);
+        } else {
+            second.push(name);
         }
     }
         </pre>
