@@ -1,0 +1,69 @@
+
+<body data-author="likewind">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю з чого почати вирішення цієї місії.
+    </div>
+    <div class="answer">
+        Вам необхідно написати цикл, який би послідовно проходив по словнику з матросами і додавав би їх на один з двох кораблів в залежності від віку.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Чи ви могли би привести приклад коду?
+    </div>
+    <div class="answer">
+        Цикл та умова розподілу матросів будуть виглядати таким чином:
+        <pre class="brush: javascript">
+    for (let name in sailors) {
+        if (sailors[name] < 20 || sailors[name] > 40) {
+            //send sailor to the first ship
+        } else {
+            //send sailor to the second ship
+        }
+    }
+        </pre>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Яким чином мені записувати кожного конкретного матроса на потрібний корабель?
+    </div>
+    <div class="answer">
+        Для цього можна створити перед циклом 2 списки - first_ship & second_ship та використати метод push(), щоб додавати матроса в потрібний список.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мені потрібен приклад коду.
+    </div>
+    <div class="answer">
+        У поєднанні з попередньою частиною рішення це буде виглядати наступним чином:
+        <pre class="brush: javascript">
+    let first = [], second = [];
+    for (let name in sailors) {
+        if (sailors[name] < 20 || sailors[name] > 40) {
+            first.push(name);
+        } else {
+            second.push(name);
+        }
+    }
+        </pre>
+    </div>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Але імена матросів у списку ідуть у хаотичному порядку. Як мені їх відсортувати?
+    </div>
+    <div class="answer">
+        Для сортування можна використати метод sort().
+    </div>
+</div>
+
+
+</body>
